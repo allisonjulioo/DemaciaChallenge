@@ -1,0 +1,27 @@
+@import '../../../styles';
+
+:hostdc-new-team {
+  .dc-content {
+    text-align: center;
+    margin: ($spacing * 8) 0;
+    figure {
+      margin: ($spacing * 3);
+      cursor: pointer;
+      border: 3px solid transparent;
+      height: 100px;
+      width: 160px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      &.selected {
+        border: 3px solid $primary;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

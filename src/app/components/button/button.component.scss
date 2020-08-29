@@ -1,0 +1,74 @@
+@import '../../../styles';
+:hostdc-button {
+  .dc-btn-primary {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #937341;
+    padding: 16px 24px;
+    background: linear-gradient(180deg, #ecc572 0, #815500);
+    cursor: pointer;
+    line-height: 1;
+    border: none;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 25px rgba($black, 0.11);
+    transition: color 0.2s;
+    min-width: 40px;
+    max-width: 100%;
+    &:before {
+      content: '';
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      display: block;
+      position: absolute;
+      background: #111;
+      z-index: -1;
+    }
+    &:hover {
+      color: #c4b998;
+    }
+    &.icon {
+      padding: 4px 4px 4px 7px;
+      font-size: 12px;
+      min-width: auto;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &.dc-btn-accent {
+      background: #0bc6e3;
+      color: rgba(#0bc6e3, 0.4);
+      &:hover {
+        box-shadow: 1px 1px 8px 0px #03a9f4e8;
+        color: #0bc6e3;
+      }
+    }
+  }
+  .dc-btn-secondary {
+    text-transform: uppercase;
+    background: #0bc6e3;
+    padding: 8px 12px;
+    cursor: pointer;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.11);
+    transition: color 0.2s;
+    min-width: 40px;
+    border: none;
+    max-width: 100%;
+    &:hover {
+      background: rgba(#0bc6e3, 0.7);
+    }
+    * {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+    }
+  }
+}

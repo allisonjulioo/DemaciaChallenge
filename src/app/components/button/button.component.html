@@ -1,0 +1,11 @@
+<button
+  [ngClass]="{ icon: icon, 'dc-btn-accent': accent }"
+  *ngIf="!secondary"
+  class="dc-btn-primary"
+  [disabled]="disabled"
+>
+  <ng-content></ng-content>
+</button>
+<button *ngIf="secondary" class="dc-btn-secondary" [disabled]="disabled">
+  <ng-content select="[secondary-content]"></ng-content>
+</button>

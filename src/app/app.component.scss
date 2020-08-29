@@ -1,0 +1,12 @@
+@import '../styles';
+:hostdc-root {
+  .dc-title {
+    h1 {
+      color: $black;
+      font-weight: normal;
+      b {
+        color: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import './behavior';
+@import './colors';
+
+.dc-container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.dc-title {
+  color: #f0e6d2;
+  font-size: ($spacing * 10);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: ($spacing * 6);
+}
+.dc-close {
+  float: right;
+}
+.dc-flex {
+  display: flex;
+  justify-content: center;
+}
+.dc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+.dc-card {
+  position: relative;
+  text-align: center;
+  background: $white;
+  border-radius: $slim-radius;
+  margin-bottom: ($spacing * 7);
+  padding: ($spacing * 3);
+  margin: ($spacing * 2) ($spacing * 3);
+  min-width: ($spacing * 20);
+  min-height: ($spacing * 40);
+  margin-bottom: ($spacing * 7);
+  overflow: hidden;
+  border: 2px solid #d6af64;
+}

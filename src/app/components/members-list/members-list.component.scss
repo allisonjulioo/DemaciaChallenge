@@ -1,0 +1,67 @@
+@import '../../../styles';
+:hostdc-members-list {
+  .dc-players-list {
+    .dc-players {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin: ($spacing * 3) 0;
+      padding: ($spacing * 2);
+      border: 1px solid $primary;
+      padding-left: ($spacing * 30);
+      margin: ($spacing * 8) 0 0;
+      &:before {
+        content: '';
+        position: absolute;
+        right: 6px;
+        top: -4px;
+        width: 1px;
+        height: 22px;
+        background: $primary;
+        transform: rotate(-45deg);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: -2px;
+        top: -1px;
+        border-bottom: 8px solid #f0e6d200;
+        border-left: 8px solid #f0e6d200;
+        border-top: 8px solid #f0e6d2;
+        border-right: 8px solid #f0e6d2;
+      }
+      figure {
+        position: absolute;
+        top: ($spacing * -3);
+        left: 0;
+        img {
+          object-fit: cover;
+          height: 100px;
+          width: 100px;
+        }
+      }
+      .dc-details {
+        p {
+          color: $grey;
+          padding: 12px 0;
+          font-size: 12px;
+        }
+      }
+      .delete {
+        position: absolute;
+        right: 4px;
+        bottom: 4px;
+      }
+    }
+    .dc-submit {
+      justify-content: flex-end;
+      text-align: right;
+    }
+    .dc-list {
+      height: 350px;
+      overflow: auto;
+      overflow-x: hidden;
+      display: block;
+    }
+  }
+}

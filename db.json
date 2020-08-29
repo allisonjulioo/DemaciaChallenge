@@ -1,0 +1,36 @@
+{
+  "teams": [
+    {
+      "title": "Meu amazing time",
+      "description": "asdas",
+      "img": "demacia",
+      "id": 1
+    },
+    {
+      "title": "asdda",
+      "description": "asdadad",
+      "img": "noxus",
+      "id": 2
+    }
+  ],
+  "members": [
+    {
+      "name": "asdasdsa",
+      "abiliity": "asdasda",
+      "teamId": "1",
+      "id": 1
+    },
+    {
+      "name": "asdasd",
+      "abiliity": "asdasda",
+      "teamId": "1",
+      "id": 2
+    },
+    {
+      "nick": "asddas",
+      "abiliity": "asdasdas",
+      "teamId": "2",
+      "id": 3
+    }
+  ]
+}

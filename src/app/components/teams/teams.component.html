@@ -1,0 +1,18 @@
+<div class="dc-container">
+  <section class="dc-steps">
+    <div class="dc-card" *ngFor="let team of teams">
+      <img [src]="['./assets/img/' + team.img + '.jpeg']" alt="" height="150" />
+      <div class="contents">
+        <dc-button
+          icon="true"
+          class="dc-close"
+          (click)="deleteTeam(team.id)"
+          >x Excluir</dc-button
+        >
+        <h5>{{ team.title }}</h5>
+        <p>{{ team.description }}</p>
+        <dc-button (click)="editTeam(team.id)">Gerenciar</dc-button>
+      </div>
+    </div>
+  </section>
+</div>

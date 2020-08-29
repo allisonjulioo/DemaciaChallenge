@@ -1,0 +1,46 @@
+@import '../../../styles';
+$border: 2px solid $black;
+
+:hostdc-teams {
+  min-height: 100vh;
+  .dc-container {
+    .dc-steps {
+      height: 540px;
+      overflow: auto;
+      .dc-card {
+        img {
+          position: absolute;
+          z-index: 0;
+          left: -2px;
+          top: -4px;
+          width: 105%;
+          height: 105%;
+          filter: blur(1px) brightness(0.4);
+        }
+        .contents {
+          color: $white;
+          z-index: 1;
+          display: block;
+          position: relative;
+          h5 {
+            font-size: ($spacing * 10);
+            color: #caa968;
+          }
+          p {
+            padding: ($spacing * 3) 0 ($spacing * 7);
+            font-size: 14px;
+            color: $white;
+          }
+        }
+        &:hover {
+          transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+          box-shadow: 9px 4px 11px -3px rgba(255, 255, 255, 0.2);
+        }
+      }
+      .dc-close {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}

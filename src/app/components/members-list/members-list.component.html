@@ -1,0 +1,53 @@
+<div class="dc-modal">
+  <div class="dc-modal-body">
+    <div class="dc-modal-header">
+      <h1>Lista de membros</h1>
+      <dc-button
+        icon="true"
+        class="dc-close"
+        (click)="activeModal.dismiss()"
+        >x</dc-button
+      >
+    </div>
+    <div class="dc-players-list">
+      <form [formGroup]="newMember" (ngSubmit)="addMember()">
+        <div class="dc-input">
+          <label for="">Nick</label>
+          <input value="" formControlName="nick" #nick />
+        </div>
+        <div class="dc-input">
+          <label for="">Habilidade</label>
+          <input value="" formControlName="abiliity" />
+        </div>
+
+        <div class="dc-header dc-submit">
+          <dc-button secondary="true">
+            <span secondary-content>Adicionar</span>
+          </dc-button>
+        </div>
+      </form>
+      <h4 class="dc-header">Membros</h4>
+      <div class="dc-list">
+        <div class="dc-players" *ngFor="let member of members">
+          <figure>
+            <img src="./assets/img/ahari.jpg" alt="" />
+          </figure>
+          <div class="dc-details">
+            <b>{{ member.nick }}</b>
+            <p>{{ member.abiliity }}</p>
+          </div>
+          <dc-button
+            icon="true"
+            class="delete"
+            (click)="deleteMember(member.id)"
+          >
+            <span>Excluir</span>
+          </dc-button>
+        </div>
+      </div>
+    </div>
+    <div class="dc-modal-footer">
+      <dc-button (click)="activeModal.close(true)">Salvar</dc-button>
+    </div>
+  </div>
+</div>

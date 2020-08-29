@@ -1,0 +1,16 @@
+@import '../../../styles';
+
+:hostdc-register {
+  .new-team {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: +8;
+    background: #191919;
+    width: 100%;
+    bottom: 0;
+    padding: 12px 0 26px;
+  }
+}

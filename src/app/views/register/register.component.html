@@ -1,0 +1,22 @@
+<div class="dc-container">
+  <div class="dc-content">
+    <div class="dc-title">Lista de times</div>
+    <dc-teams (edit)="openModal($event)" [update]="update"></dc-teams>
+    <dc-button (click)="openModal('')" class="new-team" [accent]="true"
+      >Novo time</dc-button
+    >
+  </div>
+</div>
+
+<!--
+<dc-modal id="moda-new-team" *ngIf="dialog" (close)="closeModal('moda-new-team')">
+  <div modal-header>
+    <h1>Novo time</h1>
+  </div>
+  <div modal-content>
+    <dc-new-team [id]="teamId"></dc-new-team>
+  </div>
+  <div modal-footer>
+    <dc-button (click)="closeModal('moda-new-team')">Salvar</dc-button>
+  </div>
+</dc-modal> -->

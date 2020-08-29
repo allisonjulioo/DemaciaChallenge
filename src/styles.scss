@@ -1,0 +1,42 @@
+@import './lib/behavior';
+@import './lib/colors';
+@import './lib/grid';
+@import './lib/helpers';
+@import './lib/input';
+@import './lib/modal';
+@import './lib/tabs';
+@import './lib/typography';
+
+body {
+  background: rgba($black, 0.9);
+  &:before {
+    content: '';
+    background: url('/assets/img/bg-welcome.jpg') top;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.15;
+    filter: blur(8px);
+  }
+}
+dc-root {
+  z-index: 2;
+  position: relative;
+}
+* {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}

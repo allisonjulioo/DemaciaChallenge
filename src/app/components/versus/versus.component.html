@@ -1,0 +1,43 @@
+<section *ngFor="let league of leagues">
+  <div class="dc-title">
+    <h1>{{ league.step }}º rodada</h1>
+  </div>
+  <div class="dc-versus dc-flex">
+    <div class="line"></div>
+    <div
+      class="versus left dc-flex"
+      [ngClass]="{ loser: league.loser === league.team1 }"
+    >
+      <img
+        src="./assets/img/winner.png"
+        alt=""
+        height="40"
+        *ngIf="league.loser !== league.team1 && league.loser"
+      />
+      <div class="icon">
+        <img src="./assets/img/demacia.png" alt="" height="140" />
+      </div>
+      <div class="title">{{ league.team1 }}</div>
+    </div>
+    <div class="versus center">
+      <div class="icon">
+        <div class="title">VS</div>
+      </div>
+    </div>
+    <div
+      class="versus right dc-flex"
+      [ngClass]="{ loser: league.loser === league.team2 }"
+    >
+      <img
+        src="./assets/img/winner.png"
+        alt=""
+        height="40"
+        *ngIf="league.loser !== league.team2 && league.loser"
+      />
+      <div class="title">{{ league.team2 }}</div>
+      <div class="icon">
+        <img src="./assets/img/noxus.png" alt="" height="140" />
+      </div>
+    </div>
+  </div>
+</section>

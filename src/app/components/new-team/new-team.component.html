@@ -1,0 +1,63 @@
+<div class="dc-modal">
+  <div class="dc-modal-body">
+    <div class="dc-modal-header">
+      <h1>{{ id ? 'Editar time' : 'Novo time' }}</h1>
+      <dc-button icon="true" class="dc-close" (click)="activeModal.close()"
+        >x</dc-button
+      >
+    </div>
+    <div class="dc-modal-content">
+      <form [formGroup]="newTeam">
+        <div class="dc-input">
+          <label for="">Nome</label>
+          <input value="" formControlName="title" />
+        </div>
+        <div class="dc-input">
+          <label for="">Descriçao</label>
+          <input value="" formControlName="description" />
+        </div>
+        <div class="dc-content">
+          <section class="dc-bg">
+            <h4>Selecione a imagem do time</h4>
+          </section>
+          <section class="dc-flex">
+            <figure
+              [ngClass]="{ selected: selectedImg === img.path }"
+              *ngFor="let img of images"
+              [title]="[img.title]"
+              (click)="selectImg(img.path)"
+            >
+              <img
+                [src]="['./assets/img/' + img.path + '.jpeg']"
+                alt=""
+                height="100"
+              />
+            </figure>
+          </section>
+          <dc-button secondary="true" *ngIf="id" (click)="addMembers(id)">
+            <span secondary-content>Listar membros</span>
+          </dc-button>
+          <h5>{{ total }} {{ total === 1 ? 'membro' : 'membros' }}</h5>
+        </div>
+      </form>
+    </div>
+    <div class="dc-modal-footer">
+      <dc-button (click)="addTeam()" [disabled]="a.title.errors"
+        >Salvar</dc-button
+      >
+    </div>
+  </div>
+</div>
+
+<!--
+<dc-modal id="members-list">
+  <div modal-header>
+    <h1>Lista de membros</h1>
+  </div>
+  <div modal-content>
+    <dc-members-list></dc-members-list>
+  </div>
+  <div modal-footer>
+    <dc-button (click)="closeModal('members-list')">Salvar</dc-button>
+  </div>
+</dc-modal> -->

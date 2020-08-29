@@ -1,0 +1,19 @@
+@import 'colors';
+@import 'behavior';
+
+.dc-input {
+  label {
+    font-size: ($spacing * 3);
+    padding: ($spacing * 1) 0;
+    display: block;
+  }
+  input {
+    display: block;
+    height: ($spacing * 13);
+    width: 100%;
+    background: rgba($primary, 0.17);
+    border: 2px solid;
+    border-color: transparent transparent $black transparent;
+    padding: 0 ($spacing * 3);
+  }
+}
